@@ -18,6 +18,7 @@ function fetchDataFromURLs() {
           throw error;
         });
     };
+    // Execute multiple promises concurrently
     Promise.all(url.map(fetchData))
       .then(([detail]) => {
         details= detail
